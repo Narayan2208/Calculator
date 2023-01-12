@@ -4,92 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html, body{
-            height: 100%;
-            width: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-.text-center{
-    text-align: center;
-}
-/* .bg-red{background:red} */
-
-.mx-auto{
-    margin: auto;
-}
-
-.button{
-    width: 66px;
-    padding:10px 10px;
-    margin: 0 3px;
-    border: 1px solid black;
-    border-radius:50px;
-    cursor: pointer;
-    font-size: 30px;
-    font-weight: 600;
-    border: none;
-    color: rgb(0, 0, 0)
-}
-
-.flex{
-display: flex;
-}
-
-.flex-col{
-flex-direction: column;
-}
-
-.items-center{
-    color: white;
-    align-items: center;
-}
-.row{
-    margin: 7px 0px;
-}
-.row input{
-    width: 291px;
-    font-size: 20px;
-    margin: 0;
-    padding: 10px 0px;
-    border:none;
-    border-radius: 5px;
-    text-align: center;
-    background: black;
-    color: white;
-    font-size:35px;
-}
-
-.btn-color{
-    border: none;
-    background: #FC9528;
-    color: white;
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
     
-}
-.btn-color:hover{
-    background: #FFB56A;
-}
-.btn-color-top{
-    background: #A8A8A8;
-}
-
-.outer-border{
-    padding: 15px 15px;
-    border-radius: 15px;
-    position: absolute;
-    left: 30%;
-    background: #000;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.dark-grey{
-    background: #333333;
-    color: white;
-}
-.dark-grey:hover{
-    background: #4a4a4a;
-}
-    </style>
 </head>
 <body>
     <div class="outer-border">
@@ -138,22 +55,4 @@ flex-direction: column;
 </div>
 </body>
 </html>
-<script>
-    let string = "";
-    let buttons = document.querySelectorAll(".button")
-    Array.from(buttons).forEach((button)=>{
-        button.addEventListener("click", (e)=>{
-            if(e.target.innerHTML == '='){
-                string = eval(string);
-                document.querySelector("input").value = string;
-            }else if(e.target.innerHTML == 'C'){
-                string = "";
-                document.querySelector("input").value = string;
-            }
-            else{
-                string = string + e.target.innerHTML;
-                document.querySelector("input").value = string;
-            }
-        })
-    })
-</script>
+<script src="calculator.js"></script>
