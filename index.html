@@ -22,11 +22,15 @@
 
 .button{
     width: 66px;
-    padding:20px;
+    padding:10px 10px;
     margin: 0 3px;
-    border: 2px solid black;
-    border-radius:9px;
+    border: 1px solid black;
+    border-radius:50px;
     cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    border: none;
+    color: rgb(0, 0, 0)
 }
 
 .flex{
@@ -38,6 +42,7 @@ flex-direction: column;
 }
 
 .items-center{
+    color: white;
     align-items: center;
 }
 .row{
@@ -48,55 +53,89 @@ flex-direction: column;
     font-size: 20px;
     margin: 0;
     padding: 10px 0px;
-    border:2px solid black;
+    border:none;
     border-radius: 5px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size:35px;
+}
 
+.btn-color{
+    border: none;
+    background: #FC9528;
+    color: white;
+    
+}
+.btn-color:hover{
+    background: #FFB56A;
+}
+.btn-color-top{
+    background: #A8A8A8;
+}
+
+.outer-border{
+    padding: 15px 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: 30%;
+    background: #000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.dark-grey{
+    background: #333333;
+    color: white;
+}
+.dark-grey:hover{
+    background: #4a4a4a;
 }
     </style>
 </head>
 <body>
-    <h1 class="text-center">Calculator</h1>
+    <div class="outer-border">
+    <h1 class="text-center" style="color: white">Calculator</h1>
     <div class="container items-center flex flex-col bg-red mx-auto m-w-20">
         <div class="row">
             <input type="text" class="input">
         </div>
         
         <div class="row">
-            <button class="button">C</button>
-            <button class="button">%</button>
-            <button class="button">M+</button>
-            <button class="button">M-</button>
+            <button class="button btn-color-top">C</button>
+            <button class="button btn-color-top">%</button>
+            <button class="button btn-color-top">M+</button>
+            <button class="button btn-color">M-</button>
             </div>
 
         <div class="row">
-        <button class="button">7</button>
-        <button class="button">8</button>
-        <button class="button">9</button>
-        <button class="button">*</button>
+        <button class="button dark-grey">7</button>
+        <button class="button dark-grey">8</button>
+        <button class="button dark-grey">9</button>
+        <button class="button btn-color">*</button>
         </div>
 
 
         <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">/</button>
+            <button class="button dark-grey">4</button>
+            <button class="button dark-grey">5</button>
+            <button class="button dark-grey">6</button>
+            <button class="button btn-color">/</button>
             </div>
 
             <div class="row">
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">+</button>
+                <button class="button dark-grey">1</button>
+                <button class="button dark-grey">2</button>
+                <button class="button dark-grey">3</button>
+                <button class="button btn-color">+</button>
                 </div>
 
                 <div class="row">
-                    <button class="button">0</button>
-                    <button class="button">.</button>
-                    <button class="button">=</button>
-                    <button class="button">-</button>
+                    <button class="button dark-grey">0</button>
+                    <button class="button dark-grey">.</button>
+                    <button class="button dark-grey">=</button>
+                    <button class="button btn-color">-</button>
                     </div>
     </div>
+</div>
 </body>
 </html>
 <script>
